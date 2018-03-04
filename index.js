@@ -14,13 +14,7 @@ for (let i = 0; i < ranks.length; i++) {
   }
 }
 
-function deepestChild() {
-  var grandNode = document.querySelector('#grand-node div');
-  var deepestNode = grandNode.children[0];
-  
-  for (var i = 0; !deepestNode.children[i]; i) {
-    deepestNode = deepestNode.children[0];
-  }
-  return deepestNode;
+function deepestChild(){
+  var deep = document.getElementById('grand-node').querySelectorAll('div')
+  return deep[deep.length-1]
 }
-
